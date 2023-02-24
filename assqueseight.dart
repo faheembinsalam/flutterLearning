@@ -1,19 +1,14 @@
 void main() {
-  List<Map<String, Object>> allCountries = [
+  List<Map<String, Object>> world = [
     {
       "name": "Afghanistan",
-      "code": "AF",
       "capital": "Kabul",
-      "region": "AS",
       "currency": {"code": "AFN", "name": "Afghan afghani", "symbol": "؋"},
       "language": {"code": "ps", "name": "Pashto"},
-      "dialling_code": "+93"
     },
     {
       "name": "Zimbabwe",
-      "code": "ZW",
       "capital": "Harare",
-      "region": "AF",
       "currency": {"code": "BWP", "name": "Botswana pula", "symbol": "P"},
       "language": {
         "code": "en",
@@ -25,5 +20,7 @@ void main() {
     }
   ];
 
-  print(filterByCountry(allCountries, "Afghan"));
+  //print(filterByCountry(allCountries, "Afghan"));
+  final item = world.firstWhere((e) => e['name'] == "Afghanistan");
+  print("$item");
 }
