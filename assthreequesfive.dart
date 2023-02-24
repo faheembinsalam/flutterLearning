@@ -1,16 +1,17 @@
 void main() {
   List<int> numbers = [55, 58, 62, 15, 14, 19, 20];
+  List oddNumbers = [];
+  List evenNumbers = [];
 
-  int even_count = 0;
-  int odd_count = 0;
-
-  for (int i = 0; i < numbers.length; i++) {
-    if (numbers[i] & 1 == 1) {
-      odd_count++;
-    } else {
-      even_count++;
+  for (int index = 0; index < numbers.length; index++) {
+    print(numbers[index]);
+    if (numbers[index] % 2 != 0) {
+      oddNumbers.add(numbers[index]);
+    } else if (numbers[index] % 2 == 0) {
+      evenNumbers.add(numbers[index]);
     }
-    print("$even_count \n");
-    print("$odd_count");
   }
+  print("Odd numbers:$oddNumbers > Flase");
+  print("Even numbers:$evenNumbers > True")
 }
+
