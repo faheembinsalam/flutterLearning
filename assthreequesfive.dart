@@ -12,6 +12,5 @@ void main() {
     }
   }
   print("Odd numbers:$oddNumbers > Flase");
-  print("Even numbers:$evenNumbers > True")
+  print("Even numbers:$evenNumbers > True");
 }
-
