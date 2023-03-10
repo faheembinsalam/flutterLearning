@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   // topic increament and deccreament (post english ka mtlb hai pheley bd me add hona or pre ka mtlb hai pheley add hona)
   /*num enlishmarks = 100;
@@ -67,7 +69,7 @@ void main() {
     ..addAll(data1);
   print(data3);*/
 
-  List ages = [1, 2, 3, 4, 5];
+  /*List ages = [1, 2, 3, 4, 5];
   List values = [4, 5, 6, 7, 6];
   var data4 = Map.fromIterables(ages, values);
   print(data4);
@@ -75,5 +77,43 @@ void main() {
   var table = 3;
   for (int i = 1; i <= 10; i++) {
     print("$table x $i = ${table * i}");
+  }*/
+  /*List user = [
+    ["sabeel@gmail.com", "5"],
+    ["ali@gmail.com", "5"],
+    ["raza@gmail.com", "5"]
+  ];
+
+  for (var i in user) {
+    for (var j in i) {
+      print(j);
+    }
+  }*/
+
+  /*stdout.write("Enter your Email and Password \n");
+  var email = stdin.readLineSync();
+  var password = stdin.readLineSync();
+  while (email != "faheembinsalam@gmail.com" || password != "123456") {
+    print("Login Incorrect");
+    stdout.write("Enter Your Email ");
+    email = stdin.readLineSync();
+    stdout.write("Enter Your Password ");
+    password = stdin.readLineSync();
+  }
+  print("login Successfully");*/
+
+  //two types of function arrgument optional ,parameter
+  //option define []----- (required sequence of data )
+  // {}------- (not required sequence of data)
+
+  login("faheembinsalam@gmail.com", "2356666", "faheem");
+}
+
+login(email, password, [username]) {
+  print(username);
+  if (email == "faheembinsalam@gmail.com" && password == "2356666") {
+    print("login successfully");
+  } else {
+    print("login failed");
   }
 }
